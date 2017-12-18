@@ -1,0 +1,19 @@
+var miNumero = 4;
+if (miNumero % 2 === 0) {
+  console.log("es par");
+} else {
+  console.log("es impar");
+}
+
+function comprobarSiEsPar(valor) {
+  var resultado = valor%2;
+  if (resultado === 0) {
+    return "es par";
+  } else {
+    return "es impar";
+  }
+}
+
+var miNumero = 3;
+var esPar = comprobarSiEsPar(miNumero);
+console.log(esPar);
