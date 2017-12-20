@@ -1,0 +1,34 @@
+var numero = prompt('Dame una operacion, (separe por espacios los numeros de los simbolos)');
+var res = numero.split(" ");
+function operacion (res) {
+  var valor1 = parseInt(res[0]);
+  var valor2 = parseInt(res[2]);
+  var signo = res[1];
+  var valor1isNaN= isNaN(valor1);
+  var valor2isNaN= isNaN(valor2);
+  if (valor1isNaN==true || valor2isNaN==true) /**
+   * Recordar que se comprueba si es verdadero a que no hay un numero
+   */ {
+    resultado = "que me tienes que dar un numero"
+    return resultado;
+  } else{
+    if (signo==="+") {
+      resultado = valor1 + valor2;
+      return resultado;
+    } else if (signo==="-") {
+      resultado = valor1 - valor2;
+      return resultado;
+    } else if (signo==="*") {
+      resultado = valor1 * valor2;
+      return resultado;
+    } else if (signo==="/") {
+      resultado = valor1 / valor2;
+      return resultado;
+    } else {
+      resultado = "que me tienes que dar un operador"
+      return resultado;
+    }
+  }
+}
+var resultado=operacion(res);
+alert ('El resulado es ' + resultado);
